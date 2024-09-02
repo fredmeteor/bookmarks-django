@@ -1,0 +1,5 @@
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore other files or directories you don’t want to include
