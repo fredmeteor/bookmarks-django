@@ -1,14 +1,32 @@
 {% extends "base.html" %}
-{% block title %}Log-in{% endblock %}
-{% block content %}
- <h1>Log-in</h1>
- <p>
-  Please, use the following form to log-in:
- </p>
- <form method="post">
-   {{ form.as_p }}
-   {% csrf_token %}
-   <p><input type="submit" value="Log in"></p>
-</form>
 
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+  <div class="container mt-5 d-flex justify-content-center">
+    <div class="card p-4" style="width: 100%; max-width: 400px;">
+      <h1 class="mb-4 text-center">Log-in</h1>
+      <p class="text-center">Please, use the following form to log in:</p>
+      
+      <form method="post">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+          {{ form.username.label_tag }}
+          {{ form.username }}
+          {{ form.username.errors }}
+        </div>
+        
+        <div class="mb-3">
+          {{ form.password.label_tag }}
+          {{ form.password }}
+          {{ form.password.errors }}
+        </div>
+        
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary w-100">Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}
