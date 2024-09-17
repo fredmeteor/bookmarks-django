@@ -1,5 +1,10 @@
 # Ignore Python bytecode
 *.pyc
 __pycache__/
+account/__pycache__/admin.cpython-312.pyc
+account/__pycache__/forms.cpython-312.pyc
+account/__pycache__/models.cpython-312.pyc
+account/__pycache__/urls.cpython-312.pyc
+account/__pycache__/views.cpython-312.pyc
 
 # Ignore other files or directories you don’t want to include
